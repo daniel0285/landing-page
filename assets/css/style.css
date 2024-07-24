@@ -1,8 +1,13 @@
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Roboto-Regular, Arial, Helvetica, sans-serif;
 }
 
 ul {
@@ -14,7 +19,6 @@ a {
 }
 
 body {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -23,19 +27,20 @@ body {
     background-color: #1F2937;
 }
 
+/* HEADER & HERO SECTION */
+
 .header-hero {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 82.5vh;
-    flex-grow: 1;
+    min-height: 82vh;
 }
 
 .header-hero .wrapper {
     display: flex;
     flex-direction: column;
-    gap: 100px;
-    width: 75%;
+    gap: 110px;
+    width: 70%;
 }
 
 header {
@@ -60,10 +65,13 @@ header ul {
 
 li > a {
     color: #E5E7E5;
+    opacity: 70%;
     padding-bottom: 3px;
+    font-size: 18px;
 }
 
 li > a:hover {
+    opacity: 100%;
     border-bottom: 1px solid #E5E7E5;
 
 }
@@ -104,10 +112,62 @@ li > a:hover {
     padding: 10px 30px;
     border-radius: 10px;
     outline: none;
-    border: none;
+    border:2px solid #3882F6;
+}
+
+.hero-text .sign-up:hover {
+    background-color: #E5E7E5;
+    color: #3882F6;
+    border:2px solid #3882F6;
+}
+
+.placeholder-img {
+    display: flex;
+    align-items: center;
 }
 
 .placeholder-img img{
-    height: 230px;
-    width: auto;
+    height: auto;
+    width: 450px;
+    border-radius: 18px;
 }
+
+/* INFO CONTENT SECTION */
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 60vh;
+    background-color: #F9FAF8;
+}
+
+.info-content h2 {
+    font-size: 36px;
+    font-weight: bolder;
+    color: #1F2937;
+}
+
+.info-container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 40px;
+}
+
+.info-container .info-item {
+    width: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-item img {
+    height: 150px;
+    width: 150px;
+    outline: 4px solid #e2ae03;
+    border-radius: 10px;
+    padding: 8px;
+}
+
